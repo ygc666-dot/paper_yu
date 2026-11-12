@@ -1,0 +1,25 @@
+\documentclass[oneside,doctype=proposal]{style/tongjithesis}
+
+% 封面填表日期（默认留空手写；此处预填为 2026年11月10日）
+\renewcommand{\tjdateblank}{\tjnumline{2.4em}{2026}~年~\tjnumline{1.5em}{11}~月~\tjnumline{1.5em}{12}~日}
+
+% 一、二级标题加粗（黑体叠 FakeBold；仅本文件生效，不影响任务书/中期报告）
+\renewcommand{\tjformsection}[1]{%
+  \par\vspace{\baselineskip}%
+  \noindent{\zihao{4}\heiti\bfseries\selectfont\hspace{2em}#1}\par
+  \vspace{0.5\baselineskip}%
+}
+\renewcommand{\tjformsubsection}[1]{%
+  \par\vspace{0.5\baselineskip}%
+  \noindent{\tjfontbody\heiti\bfseries\selectfont\hspace{2em}#1}\par
+  \vspace{0.5\baselineskip}%
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\input{chapters/metadata}
+\MakeDocument
+\input{chapters/proposal_body}
+
+\end{document}
